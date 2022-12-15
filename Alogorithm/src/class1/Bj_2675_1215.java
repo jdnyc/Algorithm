@@ -10,10 +10,14 @@ public class Bj_2675_1215 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		//테스트 케이스 수 입력
 		int N = sc.nextInt();
 		
+		//테스트 케이스 수 만큼 반복
 		for(int i=0; i<N; i++) {
+			//문자를 반복할 횟수 입력
 			int n = sc.nextInt();
+			//반복할 문자 입력
 			String s = sc.next();
 			
 			for(int j=0; j<s.length(); j++) {
