@@ -13,7 +13,6 @@ public class Bj_2798_1230 {
 		
 		int N = sc.nextInt();
 		int M = sc.nextInt();
-		int tmp = 1000;
 		int sum = 0;
 		
 		int [] card = new int [N];
@@ -22,23 +21,23 @@ public class Bj_2798_1230 {
 			card[i] = sc.nextInt();
 		}
 		
+		int tmp = card[0];
+		
 		for(int i=0; i<card.length; i++) {
 			for(int j=i+1; j<card.length; j++) {
 				for(int k=j+1; k<card.length; k++) {
 					sum = card[i]+card[j]+card[k];
-					System.out.println(sum);
-					if(M>=sum) {
+					if(sum==M){
+						tmp = M-sum;
+					}
+					if(M>sum) {
 						if(tmp>M-sum) {
-							tmp = sum;
-						} else if(sum==M){
-							tmp = sum;
-						}
+							tmp = M-sum;
+						} 
 					}
 				}
 			}
-		}
-		
-		System.out.println(tmp);
-		
+		}		
+		System.out.println(M-tmp);		
 	}
 }
